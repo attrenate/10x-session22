@@ -67,3 +67,50 @@ function sortStudent(name, callback) {
 
 
 sortStudent("Harry", () => "Gryffindor");
+
+// 9. Infinity Gauntlet – Function Scope
+
+function snapFingers() {
+    let stones = 6;
+    
+    function checkStones() {
+        console.log(`Thanos has ${stones} stones. The universe trembles!`);
+    }
+    
+    checkStones(); 
+}
+
+snapFingers(); 
+
+// 10. Time-Turner – Function Hoisting
+
+turnBackTime(); /*
+    This works because js allows user to call function
+    wherever user wants.
+*/
+
+function turnBackTime(){
+    console.log('Going back in time!');
+}
+
+// 11. Batman’s Secret Identity – Function Closures
+
+function batman(){
+    function alfred(){
+        return 'I am Batman!'
+    }
+    return alfred();
+}
+
+let result = batman();
+console.log(result);
+
+// 12. The Enchanted Mirror – Higher-Order Functions
+
+function magicMirror(message, transformFunction) {
+    return 'The mirror says: ' + transformFunction(message);
+}
+
+console.log(magicMirror("Will I be rich?", str => str.toUpperCase()));
+
+//
